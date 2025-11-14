@@ -167,6 +167,7 @@
             this.btnProfundidad.TabIndex = 6;
             this.btnProfundidad.Text = "Profundidad";
             this.btnProfundidad.UseVisualStyleBackColor = true;
+            this.btnProfundidad.Click += new System.EventHandler(this.btnProfundidad_Click);
             // 
             // lblResultadoArbol
             // 

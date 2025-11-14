@@ -37,7 +37,8 @@ namespace CasoDeEstudio
 
         private void btnContarNodos_Click(object sender, EventArgs e)
         {
-
+            int conteo = treeViewOrg.GetNodeCount(true);
+            lblResultadoArbol.Text = $"Total de nodos (empleados/areas): {conteo}";
         }
 
         private void btnAgregarEmpleado_Click(object sender, EventArgs e)
@@ -66,6 +67,36 @@ namespace CasoDeEstudio
             nodoSeleccionado.Nodes.Add(txtNombreEmpleado.Text);
             nodoSeleccionado.Expand();
             txtNombreEmpleado.Clear();
+        }
+
+        private void btnProfundidad_Click(object sender, EventArgs e)
+        {
+            if (treeViewOrg.Nodes.Count == 0)
+            {
+                lblResultadoArbol.Text = "el arbol esta vacio";
+                return;
+            }
+            TreeNode raiz = treeViewOrg.Nodes[0];
+            int profundiad = ObtenerProfundidad(raiz);
+            lblResultadoArbol.Text = $"Niveles del arbol o profundiad: {profundiad}";
+        }
+
+        private int ObtenerProfundidad(TreeNode nodo)
+        {
+            if (nodo == null)
+                return 0;
+
+            int maxProfundidadHijos = 0;
+            foreach (TreeNode hijo in nodo.Nodes)
+            {
+                int profundidadHijo = ObtenerProfundidad(hijo);
+                if(profundidadHijo > maxProfundidadHijos)
+                {
+                    maxProfundidadHijos = profundidadHijo;
+                }
+            }
+
+            return 1 + maxProfundidadHijos;
         }
     }
 }
