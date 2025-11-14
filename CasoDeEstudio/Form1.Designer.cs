@@ -50,7 +50,7 @@
             this.txtDistancia = new System.Windows.Forms.TextBox();
             this.btnAgregarRuta = new System.Windows.Forms.Button();
             this.btnRutaMasCorta = new System.Windows.Forms.Button();
-            this.lsResultadoGrafo = new System.Windows.Forms.ListBox();
+            this.lstResultadoGrafo = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -86,7 +86,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lsResultadoGrafo);
+            this.tabPage2.Controls.Add(this.lstResultadoGrafo);
             this.tabPage2.Controls.Add(this.btnRutaMasCorta);
             this.tabPage2.Controls.Add(this.btnAgregarRuta);
             this.tabPage2.Controls.Add(this.txtDistancia);
@@ -138,6 +138,7 @@
             this.btnAgregarEmpleado.TabIndex = 3;
             this.btnAgregarEmpleado.Text = "Agregar";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // btnBuscar
             // 
@@ -268,14 +269,14 @@
             this.btnRutaMasCorta.Text = "Ruta mas corta";
             this.btnRutaMasCorta.UseVisualStyleBackColor = true;
             // 
-            // lsResultadoGrafo
+            // lstResultadoGrafo
             // 
-            this.lsResultadoGrafo.FormattingEnabled = true;
-            this.lsResultadoGrafo.ItemHeight = 16;
-            this.lsResultadoGrafo.Location = new System.Drawing.Point(382, 10);
-            this.lsResultadoGrafo.Name = "lsResultadoGrafo";
-            this.lsResultadoGrafo.Size = new System.Drawing.Size(570, 452);
-            this.lsResultadoGrafo.TabIndex = 11;
+            this.lstResultadoGrafo.FormattingEnabled = true;
+            this.lstResultadoGrafo.ItemHeight = 16;
+            this.lstResultadoGrafo.Location = new System.Drawing.Point(382, 10);
+            this.lstResultadoGrafo.Name = "lstResultadoGrafo";
+            this.lstResultadoGrafo.Size = new System.Drawing.Size(570, 452);
+            this.lstResultadoGrafo.TabIndex = 11;
             // 
             // Form1
             // 
@@ -318,7 +319,7 @@
         private System.Windows.Forms.Button btnAgregarEdificio;
         private System.Windows.Forms.TextBox txtEdificio;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lsResultadoGrafo;
+        private System.Windows.Forms.ListBox lstResultadoGrafo;
         private System.Windows.Forms.Button btnRutaMasCorta;
     }
 }
