@@ -94,9 +94,9 @@
             // 
             // btnProfundidad
             // 
-            this.btnProfundidad.Location = new System.Drawing.Point(316, 93);
+            this.btnProfundidad.Location = new System.Drawing.Point(311, 6);
             this.btnProfundidad.Name = "btnProfundidad";
-            this.btnProfundidad.Size = new System.Drawing.Size(100, 23);
+            this.btnProfundidad.Size = new System.Drawing.Size(167, 43);
             this.btnProfundidad.TabIndex = 6;
             this.btnProfundidad.Text = "Profundidad";
             this.btnProfundidad.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@
             // 
             // btnContarNodos
             // 
-            this.btnContarNodos.Location = new System.Drawing.Point(316, 64);
+            this.btnContarNodos.Location = new System.Drawing.Point(311, 64);
             this.btnContarNodos.Name = "btnContarNodos";
-            this.btnContarNodos.Size = new System.Drawing.Size(151, 23);
+            this.btnContarNodos.Size = new System.Drawing.Size(167, 41);
             this.btnContarNodos.TabIndex = 5;
             this.btnContarNodos.Text = "Contar empleados";
             this.btnContarNodos.UseVisualStyleBackColor = true;
@@ -114,9 +114,9 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(316, 35);
+            this.btnBuscar.Location = new System.Drawing.Point(160, 64);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(109, 41);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -124,9 +124,9 @@
             // 
             // btnAgregarEmpleado
             // 
-            this.btnAgregarEmpleado.Location = new System.Drawing.Point(316, 6);
+            this.btnAgregarEmpleado.Location = new System.Drawing.Point(27, 64);
             this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
-            this.btnAgregarEmpleado.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarEmpleado.Size = new System.Drawing.Size(104, 41);
             this.btnAgregarEmpleado.TabIndex = 3;
             this.btnAgregarEmpleado.Text = "Agregar";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
@@ -189,9 +189,9 @@
             // 
             // btnRutaMasCorta
             // 
-            this.btnRutaMasCorta.Location = new System.Drawing.Point(244, 234);
+            this.btnRutaMasCorta.Location = new System.Drawing.Point(244, 239);
             this.btnRutaMasCorta.Name = "btnRutaMasCorta";
-            this.btnRutaMasCorta.Size = new System.Drawing.Size(107, 25);
+            this.btnRutaMasCorta.Size = new System.Drawing.Size(107, 56);
             this.btnRutaMasCorta.TabIndex = 10;
             this.btnRutaMasCorta.Text = "Ruta mas corta";
             this.btnRutaMasCorta.UseVisualStyleBackColor = true;
