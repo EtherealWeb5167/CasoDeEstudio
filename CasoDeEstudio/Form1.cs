@@ -47,7 +47,7 @@ namespace CasoDeEstudio
 
         private void InicializarArbol()
         {
-            TreeNode nodoRaiz = new TreeNode("Innovatec (Dirección General)");
+            TreeNode nodoRaiz = new TreeNode("Innovatec (Direccion General)");
             treeViewOrg.Nodes.Add(nodoRaiz);
         }
 
@@ -85,7 +85,7 @@ namespace CasoDeEstudio
                 }
                 else
                 {
-                    MessageBox.Show("No hay un nodo raíz. Añadiendo como raíz.");
+                    MessageBox.Show("No hay un nodo raiz. Anadiendo como raiz.");
                     treeViewOrg.Nodes.Add(txtNombreEmpleado.Text);
                     txtNombreEmpleado.Clear();
                     return;
@@ -101,12 +101,12 @@ namespace CasoDeEstudio
         {
             if (treeViewOrg.Nodes.Count == 0)
             {
-                lblResultadoArbol.Text = "Árbol está vacío.";
+                lblResultadoArbol.Text = "arbol esta vacio.";
                 return;
             }
             TreeNode raiz = treeViewOrg.Nodes[0];
             int profundidad = ObtenerProfundidad(raiz);
-            lblResultadoArbol.Text = $"Niveles del árbol (profundidad): {profundidad}";
+            lblResultadoArbol.Text = $"Niveles del arbol (profundidad): {profundidad}";
         }
         
 
@@ -174,12 +174,12 @@ namespace CasoDeEstudio
 
             if (string.IsNullOrWhiteSpace(nombreEdificio) || edificios.Contains(nombreEdificio))
             {
-                MessageBox.Show("Nombre de edificio inválido o ya existente.");
+                MessageBox.Show("Nombre de edificio invalido o ya existente.");
                 return;
             }
             if (edificios.Count >= MAX_EDIFICIOS)
             {
-                MessageBox.Show("Límite de edificios alcanzado.");
+                MessageBox.Show("Limite de edificios alcanzado.");
                 return;
             }
 
@@ -210,12 +210,12 @@ namespace CasoDeEstudio
             }
             if (!int.TryParse(txtDistancia.Text, out int distancia) || distancia <= 0)
             {
-                MessageBox.Show("Ingrese una distancia (peso) válida (número > 0).");
+                MessageBox.Show("Ingrese una distancia (peso) valida (numero > 0).");
                 return;
             }
             if (cmbOrigen.SelectedIndex == cmbDestino.SelectedIndex)
             {
-                MessageBox.Show("No se puede crear una ruta a sí mismo.");
+                MessageBox.Show("No se puede crear una ruta a si mismo.");
                 return;
             }
 
@@ -324,14 +324,14 @@ namespace CasoDeEstudio
         {
             ActualizarListaResultadosGrafo();
             lstResultadoGrafo.Items.Add(""); 
-            lstResultadoGrafo.Items.Add("--- Ruta Más Corta ---");
+            lstResultadoGrafo.Items.Add("--- Ruta mas corta ---");
 
             string strInicio = edificios[inicio];
             string strFin = edificios[fin];
 
             if (distancias[fin] == INFINITO)
             {
-                lstResultadoGrafo.Items.Add($"No se encontró ruta de {strInicio} a {strFin}");
+                lstResultadoGrafo.Items.Add($"No se encontro ruta de {strInicio} a {strFin}");
                 return;
             }
 
