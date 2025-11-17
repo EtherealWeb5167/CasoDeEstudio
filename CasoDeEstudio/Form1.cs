@@ -36,13 +36,13 @@ namespace CasoDeEstudio
                 for (int j = 0; j < MAX_EDIFICIOS; j++)
                 {
                     if (i == j)
-                        matrizAdyacencia[i, j] = 0; 
+                        matrizAdyacencia[i, j] = 0;
                     else
-                        matrizAdyacencia[i, j] = INFINITO; 
+                        matrizAdyacencia[i, j] = INFINITO;
                 }
             }
         }
-        
+
 
 
         private void InicializarArbol()
@@ -108,7 +108,7 @@ namespace CasoDeEstudio
             int profundidad = ObtenerProfundidad(raiz);
             lblResultadoArbol.Text = $"Niveles del arbol (profundidad): {profundidad}";
         }
-        
+
 
         private int ObtenerProfundidad(TreeNode nodo)
         {
@@ -238,7 +238,7 @@ namespace CasoDeEstudio
                 lstResultadoGrafo.Items.Add($"[{i}] {edificios[i]}");
             }
 
-            lstResultadoGrafo.Items.Add(""); 
+            lstResultadoGrafo.Items.Add("");
             lstResultadoGrafo.Items.Add("--- Conexiones (Matriz) ---");
             for (int i = 0; i < edificios.Count; i++)
             {
@@ -323,7 +323,7 @@ namespace CasoDeEstudio
         private void MostrarRuta(int inicio, int fin, int[] distancias, int[] previo)
         {
             ActualizarListaResultadosGrafo();
-            lstResultadoGrafo.Items.Add(""); 
+            lstResultadoGrafo.Items.Add("");
             lstResultadoGrafo.Items.Add("--- Ruta mas corta ---");
 
             string strInicio = edificios[inicio];
@@ -350,7 +350,13 @@ namespace CasoDeEstudio
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (treeViewOrg.Nodes.Count == 0) return;
+            lstResultadoArbol.Items.Clear();
+            lstResultadoArbol.Items.Add("--- Recorrido In-Orden ---");
 
+            List<string> resultados = new List<string>();
+            RecorridoInOrden(treeViewOrg.Nodes[0], resultados);
+            lstResultadoArbol.Items.AddRange(resultados.ToArray());
         }
 
         private void btnPreOrden_Click(object sender, EventArgs e)
@@ -398,6 +404,26 @@ namespace CasoDeEstudio
 
             listaResultados.Add(nodo.Text);
         }
+
+        private void RecorridoInOrden(TreeNode nodo, List<string> listaResultados)
+        {
+            if (nodo == null) return;
+
+
+            if (nodo.Nodes.Count > 0)
+            {
+                RecorridoInOrden(nodo.Nodes[0], listaResultados);
+            }
+
+            listaResultados.Add(nodo.Text);
+
+            for (int i = 1; i < nodo.Nodes.Count; i++)
+            {
+                RecorridoInOrden(nodo.Nodes[i], listaResultados);
+            }
+        }
     }
 }
-  
+
+
+

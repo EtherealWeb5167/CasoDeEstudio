@@ -325,9 +325,9 @@
             // 
             this.lstResultadoArbol.FormattingEnabled = true;
             this.lstResultadoArbol.ItemHeight = 16;
-            this.lstResultadoArbol.Location = new System.Drawing.Point(512, 134);
+            this.lstResultadoArbol.Location = new System.Drawing.Point(512, 206);
             this.lstResultadoArbol.Name = "lstResultadoArbol";
-            this.lstResultadoArbol.Size = new System.Drawing.Size(372, 324);
+            this.lstResultadoArbol.Size = new System.Drawing.Size(364, 244);
             this.lstResultadoArbol.TabIndex = 11;
             // 
             // Form1
