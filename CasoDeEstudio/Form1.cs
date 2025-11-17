@@ -352,7 +352,7 @@ namespace CasoDeEstudio
         {
             if (treeViewOrg.Nodes.Count == 0) return;
             lstResultadoArbol.Items.Clear();
-            lstResultadoArbol.Items.Add("--- Recorrido In-Orden ---");
+            lstResultadoArbol.Items.Add("Recorrido InOrden");
 
             List<string> resultados = new List<string>();
             RecorridoInOrden(treeViewOrg.Nodes[0], resultados);
@@ -363,7 +363,7 @@ namespace CasoDeEstudio
         {
             if (treeViewOrg.Nodes.Count == 0) return;
             lstResultadoArbol.Items.Clear();
-            lstResultadoArbol.Items.Add("--- Recorrido Pre-Orden (Raiz -> Hijos) ---");
+            lstResultadoArbol.Items.Add("Recorrido PreOrden (Raiz -> Hijos)");
 
             List<string> resultados = new List<string>();
             RecorridoPreOrden(treeViewOrg.Nodes[0], resultados);
@@ -386,7 +386,7 @@ namespace CasoDeEstudio
         {
             if (treeViewOrg.Nodes.Count == 0) return;
             lstResultadoArbol.Items.Clear();
-            lstResultadoArbol.Items.Add("--- Recorrido Post-Orden (Hijos -> Raiz) ---");
+            lstResultadoArbol.Items.Add("Recorrido Postorden (Hijos -> Raiz)");
 
             List<string> resultados = new List<string>();
             RecorridoPostOrden(treeViewOrg.Nodes[0], resultados);
