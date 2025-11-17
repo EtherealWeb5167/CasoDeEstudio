@@ -347,6 +347,57 @@ namespace CasoDeEstudio
             camino.Reverse();
             lstResultadoGrafo.Items.Add("Camino: " + string.Join(" -> ", camino));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPreOrden_Click(object sender, EventArgs e)
+        {
+            if (treeViewOrg.Nodes.Count == 0) return;
+            lstResultadoArbol.Items.Clear();
+            lstResultadoArbol.Items.Add("--- Recorrido Pre-Orden (Raiz -> Hijos) ---");
+
+            List<string> resultados = new List<string>();
+            RecorridoPreOrden(treeViewOrg.Nodes[0], resultados);
+            lstResultadoArbol.Items.AddRange(resultados.ToArray());
+        }
+
+        private void RecorridoPreOrden(TreeNode nodo, List<string> listaResultados)
+        {
+            if (nodo == null) return;
+
+            listaResultados.Add(nodo.Text);
+
+            foreach (TreeNode hijo in nodo.Nodes)
+            {
+                RecorridoPreOrden(hijo, listaResultados);
+            }
+        }
+
+        private void btnPostOrden_Click(object sender, EventArgs e)
+        {
+            if (treeViewOrg.Nodes.Count == 0) return;
+            lstResultadoArbol.Items.Clear();
+            lstResultadoArbol.Items.Add("--- Recorrido Post-Orden (Hijos -> Raiz) ---");
+
+            List<string> resultados = new List<string>();
+            RecorridoPostOrden(treeViewOrg.Nodes[0], resultados);
+            lstResultadoArbol.Items.AddRange(resultados.ToArray());
+        }
+
+        private void RecorridoPostOrden(TreeNode nodo, List<string> listaResultados)
+        {
+            if (nodo == null) return;
+
+            foreach (TreeNode hijo in nodo.Nodes)
+            {
+                RecorridoPostOrden(hijo, listaResultados);
+            }
+
+            listaResultados.Add(nodo.Text);
+        }
     }
 }
   

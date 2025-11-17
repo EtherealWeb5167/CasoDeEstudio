@@ -51,6 +51,10 @@
             this.btnAgregarEdificio = new System.Windows.Forms.Button();
             this.txtEdificio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnPreOrden = new System.Windows.Forms.Button();
+            this.btnInOrden = new System.Windows.Forms.Button();
+            this.btnPostOrden = new System.Windows.Forms.Button();
+            this.lstResultadoArbol = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -68,6 +72,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lstResultadoArbol);
+            this.tabPage1.Controls.Add(this.btnPostOrden);
+            this.tabPage1.Controls.Add(this.btnInOrden);
+            this.tabPage1.Controls.Add(this.btnPreOrden);
             this.tabPage1.Controls.Add(this.lblResultadoArbol);
             this.tabPage1.Controls.Add(this.btnProfundidad);
             this.tabPage1.Controls.Add(this.btnContarNodos);
@@ -151,9 +159,9 @@
             // 
             // treeViewOrg
             // 
-            this.treeViewOrg.Location = new System.Drawing.Point(27, 132);
+            this.treeViewOrg.Location = new System.Drawing.Point(27, 134);
             this.treeViewOrg.Name = "treeViewOrg";
-            this.treeViewOrg.Size = new System.Drawing.Size(925, 331);
+            this.treeViewOrg.Size = new System.Drawing.Size(389, 329);
             this.treeViewOrg.TabIndex = 0;
             // 
             // tabPage2
@@ -283,6 +291,45 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Edificio";
             // 
+            // btnPreOrden
+            // 
+            this.btnPreOrden.Location = new System.Drawing.Point(512, 6);
+            this.btnPreOrden.Name = "btnPreOrden";
+            this.btnPreOrden.Size = new System.Drawing.Size(167, 43);
+            this.btnPreOrden.TabIndex = 8;
+            this.btnPreOrden.Text = "Preorden";
+            this.btnPreOrden.UseVisualStyleBackColor = true;
+            this.btnPreOrden.Click += new System.EventHandler(this.btnPreOrden_Click);
+            // 
+            // btnInOrden
+            // 
+            this.btnInOrden.Location = new System.Drawing.Point(512, 64);
+            this.btnInOrden.Name = "btnInOrden";
+            this.btnInOrden.Size = new System.Drawing.Size(167, 43);
+            this.btnInOrden.TabIndex = 9;
+            this.btnInOrden.Text = "Inorden";
+            this.btnInOrden.UseVisualStyleBackColor = true;
+            this.btnInOrden.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnPostOrden
+            // 
+            this.btnPostOrden.Location = new System.Drawing.Point(709, 6);
+            this.btnPostOrden.Name = "btnPostOrden";
+            this.btnPostOrden.Size = new System.Drawing.Size(167, 43);
+            this.btnPostOrden.TabIndex = 10;
+            this.btnPostOrden.Text = "Postorden";
+            this.btnPostOrden.UseVisualStyleBackColor = true;
+            this.btnPostOrden.Click += new System.EventHandler(this.btnPostOrden_Click);
+            // 
+            // lstResultadoArbol
+            // 
+            this.lstResultadoArbol.FormattingEnabled = true;
+            this.lstResultadoArbol.ItemHeight = 16;
+            this.lstResultadoArbol.Location = new System.Drawing.Point(512, 134);
+            this.lstResultadoArbol.Name = "lstResultadoArbol";
+            this.lstResultadoArbol.Size = new System.Drawing.Size(372, 324);
+            this.lstResultadoArbol.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,6 +373,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstResultadoGrafo;
         private System.Windows.Forms.Button btnRutaMasCorta;
+        private System.Windows.Forms.Button btnPostOrden;
+        private System.Windows.Forms.Button btnInOrden;
+        private System.Windows.Forms.Button btnPreOrden;
+        private System.Windows.Forms.ListBox lstResultadoArbol;
     }
 }
 
